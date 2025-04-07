@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | Art With Heart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          id="logo"
+          src="assets/Skærmbillede 2025-04-07 kl. 11.50.01.png"
+          alt=""
+        />
+        <ul>
+          <a href="about.html"><li>About</li></a>
+          <a href="shop.html"><li>Shop</li></a>
+        </ul>
+      </nav>
+    </header>
+
+    <form action="/submit" method="post">
+      <label for="product">Choose a product:</label>
+      <select name="product" id="product">
+        <option value="">-- Select Product --</option>
+        <option value="prod1">Product 1</option>
+        <option value="prod2">Product 2</option>
+        <option value="prod3">Product 3</option>
+      </select>
+
+      <label for="subproduct">Choose a sub-product:</label>
+      <select name="subproduct" id="subproduct">
+        <option value="">-- Select Sub-product --</option>
+      </select>
+
+      <label for="customization">Enter customization (e.g. birth date):</label>
+      <input type="text" id="customization" name="customization" />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
