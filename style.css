@@ -1,17 +1,18 @@
-* {
+* { /* Sætter font og margin for alle elementer */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* Indsæt rigtige font */ 
+  text-decoration: none;
 }
 
-body {
-  background-color: #f8f6f2;
+body { /* Sætter baggrundsfarve */
+  background-color: #F8F6F2;
 }
 
 header {
-  height: 80px;
-  background-color: #6b4f3b;
+  height: 100px;
+  background-color: #F8F6F2;
   margin: 0;
   padding: 0;
   display: flex;
@@ -43,6 +44,10 @@ header nav ul a {
   text-decoration: none;
   color: white;
   margin: 0 20px;
+}
+
+header, section {
+  border-bottom: 2px solid lightgrey;
 }
 
 form {
@@ -93,4 +98,311 @@ form button {
 
 form button:hover {
   background-color: #5a3e2c;
+}
+
+
+/* Design */
+
+h1 {
+  font-size: 80px;
+  color: #6B4F3B;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  color: #6B4F3B;
+  margin-bottom: 80px;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 100; 
+  color: #6B4F3B;
+  margin-bottom: 80px;
+}
+
+i {
+  font-size: 30px;
+  color: black;
+}
+
+.lille-knap {
+  background-color: #D7C4A3;
+  color: #6B4F3B;
+  border: 2px solid #6B4F3B;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.knap {
+  background-color: #D7C4A3;
+  color: #6B4F3B;
+  border: 2px solid #6B4F3B;
+  border-radius: 6px;
+  padding: 30px 20% 30px 20px;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.transparant-knap  {
+  background-color: transparent;
+  color: #6B4F3B;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.fuld-bredde {
+  display: block;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+
+
+/* Hero */
+
+.hero {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero > .lille-knap {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.hero p {
+  font-size: 40px;
+  color: #6B4F3B;
+  text-align: center;
+}
+
+
+
+/* Inspiration Sektionen */
+
+.inspiration {
+  padding: 5%;
+}
+
+.forskellige-inspirationer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+/* Om os */
+
+.om-os {
+  padding: 5%;
+}
+
+.om-os h2 {
+  margin-bottom: 5px;
+}
+
+.artikel-samling {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.smallere-artikel {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  background-color: #D7C4A3;
+  border: 2px solid #6B4F3B;
+  border-radius: 10px;
+  padding: 30px;
+  gap: 20px;
+}
+
+article img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+article p {
+  color: #6B4F3B;
+  font-weight: 200;
+}
+
+
+
+
+/* Produkter */
+
+.produkter {
+  padding: 5%;
+}
+
+.shop-produkt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.knap-gul {
+  background-color: #D4AF37;
+}
+
+.shop-produkt h2 {
+  margin-bottom: 30px;
+}
+
+
+
+/* Enkelt produkt */	
+
+.produkt {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 5%;
+}
+
+.produkt div {
+  width: 100%;
+}
+
+.produkt > div > img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.produkt h2 {
+  margin-bottom: 20px;
+}
+
+.pris {
+  font-size: 30px;
+  color: #6B4F3B;
+  margin-bottom: 20px;
+}
+
+.størrelse-og-type {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.dropdown p {
+  font-size: 20px;
+  color: #6B4F3B;
+}
+
+.dropdown-knap {
+  background-color: #D7C4A3;
+  color: #6B4F3B;
+  border: 2px solid #6B4F3B;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dropdown-knap i {
+  color: #6B4F3B;
+}
+
+.beskrivelse {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Anmeldelser */
+
+.anmeldelser {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 50px;
+  padding: 2% 5%;
+}
+
+.anmeldelser h2 {
+  margin-bottom: 20px;
+}
+
+.anmeldelser h3 {
+  margin-bottom: 0;
+}
+
+.anmeldelser article {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.stjerner i {
+  color: #6B4F3B;
+  font-size: 30px;
+}
+
+.forskellige-anmeldelser {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 50px;;
+}
+
+.anmelder {
+  display: flex;
+  gap: 20px;
+}
+
+.anmelder img {
+  width: 50px;
+  height: 50px;
+}
+
+
+
+/* Footer */
+
+footer {
+  padding: 2.5%; 
+}
+
+footer img {
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
 }
