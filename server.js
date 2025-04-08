@@ -21,20 +21,24 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Define the email options (who you're sending the email to, subject, body, etc.)
 const sendEmail = (orderDetails) => {
   const mailOptions = {
-    from: process.env.EMAIL_USER, // Sender address from .env file
-    to: "rasmoe01@iba.dk", // Factory email address
-    subject: `New Order - ${orderDetails.product}`, // Subject
+    from: process.env.EMAIL_USER,
+    to: "rasmoe01@iba.dk",
+    subject: `New Order - ${orderDetails.product}`,
     text: `
-      A new order has been submitted:
+    A new order has been submitted:
 
-      Product: ${orderDetails.product}
-      Sub-product: ${orderDetails.subproduct}
-      Customization: ${orderDetails.customization}
-      Order Time: ${orderDetails.timestamp}
-    `, // Plain text body
+    Product: ${orderDetails.product}
+    Sub-product: ${orderDetails.subproduct}
+    Customization: ${orderDetails.customization}
+
+    Full name: ${orderDetails.fullname}
+    Address: ${orderDetails.address}
+    Email: ${orderDetails.email}
+
+    Order Time: ${orderDetails.timestamp}
+  `,
   };
 
   return transporter.sendMail(mailOptions);
@@ -46,6 +50,9 @@ app.post("/submit", (req, res) => {
     product: req.body.product,
     subproduct: req.body.subproduct,
     customization: req.body.customization,
+    fullname: req.body.fullname,
+    address: req.body.address,
+    email: req.body.email,
     timestamp: new Date().toISOString(),
   };
 

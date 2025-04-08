@@ -1,10 +1,23 @@
 * {
-  /* Sætter font og margin for alle elementer */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif; /* Indsæt rigtige font */
+  font-family: "la_fontaineregular";
   text-decoration: none;
+}
+
+@font-face {
+  font-family: "la_fontaineregular";
+  src: url("fonts/lafontaine-regular-webfont.woff2") format("woff2"),
+    url("fonts/lafontaine-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "erga";
+  src: url("fonts/Erga.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -32,7 +45,6 @@ header nav {
 
 header nav img {
   margin: 0 50px;
-  width: 40px;
   height: 40px;
 }
 
@@ -60,6 +72,8 @@ form {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 10rem;
 }
 
 form label {
@@ -83,7 +97,8 @@ form input[type="email"] {
 }
 
 form select:focus,
-form input[type="text"]:focus {
+form input[type="text"]:focus,
+form input[type="email"]:focus {
   border-color: #6b4f3b;
   outline: none;
 }
@@ -104,15 +119,47 @@ form button:hover {
   background-color: #5a3e2c;
 }
 
+/* Sliding effect */
+.form-wrapper {
+  overflow: hidden;
+}
+
+.form-step {
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s ease;
+}
+
+.slide-step-2 {
+  transform: translateX(-50%);
+}
+
+.step-container {
+  width: 50%;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.form-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-nav button:first-child {
+  margin-right: 1rem;
+}
+
 /* Design */
 
 h1 {
+  font-family: "erga";
   font-size: 80px;
   color: #6b4f3b;
   text-align: center;
 }
 
 h2 {
+  font-family: "erga";
   font-size: 30px;
   color: #6b4f3b;
   margin-bottom: 80px;
