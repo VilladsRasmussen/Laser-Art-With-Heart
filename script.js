@@ -2,9 +2,22 @@ const productSelect = document.getElementById("product");
 const subProductSelect = document.getElementById("subproduct");
 
 const subProducts = {
-  prod1: ["1", "2", "3", "4", "5", "6"],
+  prod1: [
+    "Vandbærer",
+    "Fisken",
+    "Vædderen",
+    "Tyren",
+    "Tvillingen",
+    "Krebsen",
+    "Løven",
+    "Jomfruen",
+    "Vægten",
+    "Skorpionen",
+    "Skytten",
+    "Stenbukken",
+  ],
   prod2: ["1", "2", "3"],
-  prod3: ["1", "2", "3"],
+  prod3: ["1", "2", ""],
 };
 
 productSelect.addEventListener("change", function () {

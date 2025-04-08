@@ -1,0 +1,20 @@
+[
+  {
+    "product": "prod1",
+    "subproduct": "4",
+    "customization": "Villads Konfirmation",
+    "timestamp": "2025-04-08T06:14:47.943Z"
+  },
+  {
+    "product": "prod2",
+    "subproduct": "2",
+    "customization": "Henrik hedder ikke Martin",
+    "timestamp": "2025-04-08T06:16:02.634Z"
+  },
+  {
+    "product": "prod1",
+    "subproduct": "fisken",
+    "customization": "Lucas Konfirmation 2010",
+    "timestamp": "2025-04-08T06:21:27.568Z"
+  }
+]
