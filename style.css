@@ -20,6 +20,21 @@
   font-style: normal;
 }
 
+.print-section {
+  padding: 10% 30% 10% 10%;
+  background-color: white;
+}
+
+.print-section p {
+  color: black;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.print-bottom {
+  margin-bottom: 50px;
+}
+
 body {
   /* Sætter baggrundsfarve */
   background-color: #f8f6f2;
@@ -391,6 +406,21 @@ article p {
 
 .produkter {
   padding: 5%;
+}
+
+.shop-intro {
+  padding: 2% 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  text-align: center;
+  gap: 20px;
+}
+
+.shop-intro h2 {
+  margin-bottom: 20px;
 }
 
 .shop-produkt {
