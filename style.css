@@ -20,21 +20,6 @@
   font-style: normal;
 }
 
-.print-section {
-  padding: 10% 30% 10% 10%;
-  background-color: white;
-}
-
-.print-section p {
-  color: black;
-  font-size: 50px;
-  font-weight: 900;
-}
-
-.print-bottom {
-  margin-bottom: 50px;
-}
-
 body {
   /* Sætter baggrundsfarve */
   background-color: #f8f6f2;
@@ -437,7 +422,22 @@ article p {
   margin-bottom: 30px;
 }
 
-/* Enkelt produkt */
+.forskellige-produkter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-bottom: 2px solid lightgrey;
+}
+
+.forskellige-produkter h3 {
+  margin-bottom: 20px;
+}
+
+.forskellige-produkter p {
+  margin-bottom: 20px;
+}
 
 .produkt {
   display: flex;
@@ -450,14 +450,65 @@ article p {
   width: 100%;
 }
 
-.produkt > div > img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
 .produkt h2 {
   margin-bottom: 20px;
+}
+
+.stjernetegnene {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  object-fit: contain;
+}
+
+.forskellige-stjernetegn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.forskellige-stjernetegn img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.forskellige-mindeblader {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.forskellige-mindeblader img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 20px;
+  color: #6b4f3b;
+  margin-top: 10px;
+  margin-bottom: 20px;;
+}
+
+.display-eksempel {
+  width: 10%;
+  height: auto;
 }
 
 .pris {
@@ -530,6 +581,11 @@ article p {
   width: 30%;
   display: flex;
   flex-direction: column;
+  padding: 0;
+}
+
+.stjerner {
+  margin-bottom: 20px;
 }
 
 .stjerner i {
@@ -539,7 +595,7 @@ article p {
 
 .forskellige-anmeldelser {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 50px;
@@ -547,12 +603,15 @@ article p {
 
 .anmelder {
   display: flex;
+  justify-content: flex-start;
   gap: 20px;
+  margin-top: 20px;
 }
 
-.anmelder img {
+.anmelder-profil { 
   width: 50px;
   height: 50px;
+  margin: 0;
 }
 
 /* Footer */
