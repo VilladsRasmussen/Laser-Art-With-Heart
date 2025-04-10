@@ -151,6 +151,15 @@ form button:hover {
 
 /* Design */
 
+h1, h2, h3 {
+  font-family: "erga"; 
+}
+
+p {
+  font-family: "la_fontaineregular"; 
+  color: #6b4f3b;
+}
+
 h1 {
   font-family: "erga";
   font-size: 80px;
@@ -160,7 +169,7 @@ h1 {
 
 h2 {
   font-family: "erga";
-  font-size: 30px;
+  font-size: 40px;
   color: #6b4f3b;
   margin-bottom: 80px;
 }
@@ -173,8 +182,13 @@ h3 {
 }
 
 i {
-  font-size: 30px;
-  color: black;
+  font-size: 40px;
+  color: #6b4f3b;
+}
+
+.lille-knap:hover, .hero-knap:hover, .knap:hover {
+  background-color: #6b4f3b;
+  color: #d7c4a3;
 }
 
 .lille-knap {
@@ -188,15 +202,38 @@ i {
   text-align: center;
 }
 
+.margin-bottom {
+  margin-bottom: 50px; 
+}
+
+.hero-knap {
+  background-color: #d7c4a3;
+  color: #6b4f3b;
+  border: 2px solid #6b4f3b;
+  border-radius: 6px;
+  padding: 20px 30px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
 .knap {
   background-color: #d7c4a3;
   color: #6b4f3b;
   border: 2px solid #6b4f3b;
   border-radius: 6px;
-  padding: 30px 20% 30px 20px;
-  font-size: 25px;
+  padding: 1%;
   cursor: pointer;
   text-align: left;
+  width: 20%;
+}
+
+.knap img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .transparant-knap {
@@ -220,17 +257,43 @@ i {
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-
-.hero > .lille-knap {
-  width: 200px;
-  margin: 0 auto;
-  margin-top: 50px;
+  background: linear-gradient(rgba(248, 246, 242, 0.8), rgba(248, 246, 242, 0.8)), url('assets/art-with-heart.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero p {
   font-size: 40px;
   color: #6b4f3b;
+  text-align: center;
+  font-family: "erga";
+}
+
+.hero img {
+  width: 40%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.lille-om-os {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.lille-om-os h2 {
+  margin-bottom: 20px;
+}
+
+.lille-om-os p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  width: 50%;
   text-align: center;
 }
 
@@ -240,9 +303,13 @@ i {
   padding: 5%;
 }
 
+.inspiration h2 {
+  text-align: center;
+}
+
 .forskellige-inspirationer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 40px;
   margin-top: 50px;
@@ -251,11 +318,40 @@ i {
 /* Om os */
 
 .om-os {
-  padding: 5%;
+  padding: 5% 5% 0 5%;
+  text-align: center;
+  padding-bottom: 60px;
 }
 
 .om-os h2 {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.om-os p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.om-os a {
+  text-decoration: none;
+  color: #6b4f3b;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  gap: 40px;
+  border-bottom: 2px solid lightgrey; 
+}
+
+.intro img {
+  width: 20%;
+  height: 20%;
+  border-radius: 10px;
 }
 
 .artikel-samling {
@@ -267,25 +363,23 @@ i {
 }
 
 .smallere-artikel {
-  width: 30%;
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
 
 article {
   display: flex;
-  justify-content: space-between;
-  background-color: #d7c4a3;
-  border: 2px solid #6b4f3b;
   border-radius: 10px;
   padding: 30px;
-  gap: 20px;
 }
 
 article img {
   width: 200px;
   height: 200px;
   border-radius: 10px;
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
 article p {
@@ -297,6 +391,21 @@ article p {
 
 .produkter {
   padding: 5%;
+}
+
+.shop-intro {
+  padding: 2% 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  text-align: center;
+  gap: 20px;
+}
+
+.shop-intro h2 {
+  margin-bottom: 20px;
 }
 
 .shop-produkt {
@@ -313,7 +422,22 @@ article p {
   margin-bottom: 30px;
 }
 
-/* Enkelt produkt */
+.forskellige-produkter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-bottom: 2px solid lightgrey;
+}
+
+.forskellige-produkter h3 {
+  margin-bottom: 20px;
+}
+
+.forskellige-produkter p {
+  margin-bottom: 20px;
+}
 
 .produkt {
   display: flex;
@@ -326,14 +450,65 @@ article p {
   width: 100%;
 }
 
-.produkt > div > img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
 .produkt h2 {
   margin-bottom: 20px;
+}
+
+.stjernetegnene {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  object-fit: contain;
+}
+
+.forskellige-stjernetegn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.forskellige-stjernetegn img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.forskellige-mindeblader {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.forskellige-mindeblader img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 20px;
+  color: #6b4f3b;
+  margin-top: 10px;
+  margin-bottom: 20px;;
+}
+
+.display-eksempel {
+  width: 10%;
+  height: auto;
 }
 
 .pris {
@@ -406,6 +581,11 @@ article p {
   width: 30%;
   display: flex;
   flex-direction: column;
+  padding: 0;
+}
+
+.stjerner {
+  margin-bottom: 20px;
 }
 
 .stjerner i {
@@ -415,7 +595,7 @@ article p {
 
 .forskellige-anmeldelser {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 50px;
@@ -423,18 +603,82 @@ article p {
 
 .anmelder {
   display: flex;
+  justify-content: flex-start;
   gap: 20px;
+  margin-top: 20px;
 }
 
-.anmelder img {
+.anmelder-profil { 
   width: 50px;
   height: 50px;
+  margin: 0;
 }
 
 /* Footer */
 
 footer {
   padding: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 2px solid lightgrey;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-top > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  margin: 10px 0;
+}
+
+li a {
+  color: #6b4f3b;
+  text-decoration: underline;
+}
+
+.kontakt p {
+  margin: 5px 0;
+}
+
+.social-ikoner {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.footer-bottom img {
+  width: 300px;
+  height: auto;
+}
+
+footer h3 {
+  margin-bottom: 20px;
 }
 
 footer img {
