@@ -6,14 +6,8 @@ nextBtn.addEventListener("click", () => {
   const product = document.getElementById("product");
   const subproduct = document.getElementById("subproduct");
   const customization = document.getElementById("customization");
-  const email = document.getElementById("email");
 
-  if (
-    product.value &&
-    subproduct.value &&
-    customization.value.trim() &&
-    email.validity.valid
-  ) {
+  if (product.value && subproduct.value && customization.value.trim()) {
     formStep.classList.add("slide-step-2");
   } else {
     alert("Please fill out all fields in Step 1 before continuing.");
@@ -42,8 +36,12 @@ const subProducts = {
     "Skytten",
     "Stenbukken",
   ],
-  prod2: ["1", "2", "3"],
-  prod3: ["1", "2", ""],
+  prod2: ["Times New Roman", "Comic Sans", "Arial"],
+  prod3: [
+    "Giraf, Fisk, Kanin, Hund",
+    "Frø, Hval, Fisk, Krabbe",
+    "Løve, Flodhest, Elefant, Flamingo",
+  ],
 };
 
 productSelect.addEventListener("change", function () {

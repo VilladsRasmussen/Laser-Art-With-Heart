@@ -58,13 +58,11 @@ app.post("/submit", (req, res) => {
 
   const filePath = "submissions.json";
 
-  // Check if the file exists
   fs.readFile(filePath, "utf8", (err, data) => {
     let submissions = [];
 
     if (!err && data) {
       try {
-        // Parse existing data if the file contains valid JSON
         submissions = JSON.parse(data);
       } catch (parseError) {
         console.error("❌ Error parsing JSON:", parseError);
@@ -72,10 +70,8 @@ app.post("/submit", (req, res) => {
       }
     }
 
-    // Append the new form data to the array
     submissions.push(formData);
 
-    // Save the updated array back to the file
     fs.writeFile(filePath, JSON.stringify(submissions, null, 2), (err) => {
       if (err) {
         console.error("❌ Error saving submission:", err);
@@ -83,7 +79,6 @@ app.post("/submit", (req, res) => {
       } else {
         console.log("✅ Submission saved:", formData);
 
-        // Send the email to the factory
         sendEmail(formData)
           .then(() => {
             console.log("✅ Email sent to factory");
