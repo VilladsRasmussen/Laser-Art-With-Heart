@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
 const sendEmail = (orderDetails) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: "rasmoe01@iba.dk",
+    to: "lucber01@iba.dk",
     subject: `New Order - ${orderDetails.product}`,
     text: `
     A new order has been submitted:
