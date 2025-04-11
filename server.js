@@ -23,8 +23,8 @@ const transporter = nodemailer.createTransport({
 
 const sendEmail = (orderDetails) => {
   const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: "lucber01@iba.dk",
+    from: process.env.EMAIL_USER, 
+    to: "lucber01@iba.dk", // hvis du skal ændre fabrikmailen, så er det her
     subject: `New Order - ${orderDetails.product}`,
     text: `
     A new order has been submitted:
